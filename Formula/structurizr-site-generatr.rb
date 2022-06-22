@@ -5,6 +5,7 @@ class StructurizrSiteGeneratr < Formula
   sha256 "53c7710bedefd58556da8a943cd40533121f8b75ca5d1df56374aa7f64d9a6a8"
   license "Apache-2.0"
 
+  depends_on "graphviz"
   depends_on "openjdk"
 
   def install
