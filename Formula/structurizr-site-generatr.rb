@@ -1,8 +1,8 @@
 class StructurizrSiteGeneratr < Formula
   desc "Static site generator for architecture models created with Structrizr DSL"
   homepage "https://github.com/avisi-cloud/structurizr-site-generatr"
-  url "https://github.com/avisi-cloud/structurizr-site-generatr/releases/download/1.0.6/structurizr-site-generatr-1.0.6.tar.gz"
-  sha256 "00c37757b24389b79087e27b36e85f74f2bd56edeb48b2fc1094e59d60a0c8ce"
+  url "https://github.com/avisi-cloud/structurizr-site-generatr/releases/download/1.0.7/structurizr-site-generatr-1.0.7.tar.gz"
+  sha256 "a78721fc20fd3551673f86fe91cb8062ca94289bf69a3734548efca5382e2633"
   license "Apache-2.0"
 
   depends_on "graphviz"
