@@ -1,5 +1,7 @@
 # Avisi Cloud Homebrew repository
 
+![Avisi Cloud Logo](https://docs.avisi.cloud/avisi-cloud-logo-black.png)
+
 This repository holds the homebrew formula's for Avisi Cloud released tooling.
 
 ## How do I install these formulae?
