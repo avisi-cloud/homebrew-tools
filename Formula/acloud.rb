@@ -5,23 +5,23 @@
 class Acloud < Formula
   desc ""
   homepage "https://avisi.nl/"
-  version "0.11.0"
+  version "0.12.0"
 
   depends_on "zsh" => :optional
   depends_on "fzf" => :optional
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.11.0/acloud_0.11.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3805290e73ef3a89edfff66ecee1dc70ffea2bc1d54cce1bec453e70c416e5b2"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.12.0/acloud_0.12.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a1fd2162e13342cfd7b14ab0fe881ce4aabec2871d33820e59a79fb1a1754249"
 
       def install
         bin.install "acloud"
       end
     end
     if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.11.0/acloud_0.11.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "27bfb3ceb143740bea12f13c5741efdfaef708e985be8d91a26a4b414a9a9ca2"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.12.0/acloud_0.12.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4cf284863f145550afaa10704675a2c251e5a8a03758d35103fb7ab61d4dffb5"
 
       def install
         bin.install "acloud"
@@ -31,16 +31,16 @@ class Acloud < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.11.0/acloud_0.11.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0f9f99e6a90c652cd0a21bd1785317bdd2d98adf0e4b0c16b34d27619d177e9b"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.12.0/acloud_0.12.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "3c3e8ed465f2eb5a3d6f2aa4d4077a8981dbdee104681a439bda423a69181078"
 
       def install
         bin.install "acloud"
       end
     end
     if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.11.0/acloud_0.11.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ff18dcc1d5440fa56f58f6af8a21a9e02aa14446c4a6254aa7394726cf1585a1"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.12.0/acloud_0.12.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "66c4c60a4e8889e0295bf7e5dbb24a7d105a18de5cdf484c515109fafe8b169d"
 
       def install
         bin.install "acloud"
