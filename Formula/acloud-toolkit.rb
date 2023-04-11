@@ -5,23 +5,23 @@
 class AcloudToolkit < Formula
   desc ""
   homepage "https://docs.avisi.cloud/"
-  version "1.4.0"
+  version "1.5.0"
 
   depends_on "zsh" => :optional
   depends_on "fzf" => :optional
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.4.0/acloud-toolkit_1.4.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f82090d9f421bb884b76a86d81dca0ee546c03ec015d3ddd50b868b1bbf2917b"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.5.0/acloud-toolkit_1.5.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "431d1e8a5151c8eeaaea10d1889475fef645a44ab64d52badef26db4ddf1e27c"
 
       def install
         bin.install "acloud-toolkit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.4.0/acloud-toolkit_1.4.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4b0fa37a1b816434e836a04826f7c319524bc3def3aeb7ab6e3a6ecc52075d0b"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.5.0/acloud-toolkit_1.5.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c20963323042ebdcc0584eb83b44c83c0e4134550594b602794edc78687d6006"
 
       def install
         bin.install "acloud-toolkit"
@@ -31,16 +31,16 @@ class AcloudToolkit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.4.0/acloud-toolkit_1.4.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ce11087238120f3dc5a171b233bebeefbf090b5944168feccedf35477908d567"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.5.0/acloud-toolkit_1.5.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "66e79367869ab5ea68afc9ef047412fb3b0033646e4d3387557380cbb76951bd"
 
       def install
         bin.install "acloud-toolkit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.4.0/acloud-toolkit_1.4.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b2f11063b946013848a43e53cc6ce02ecd384e74fc5bab686c9a1763fc8be234"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.5.0/acloud-toolkit_1.5.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "199e58187726ae4bcf616e8d089eaacbf30a2aed3864e4863088ef03b3910815"
 
       def install
         bin.install "acloud-toolkit"
