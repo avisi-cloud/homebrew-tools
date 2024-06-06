@@ -5,15 +5,15 @@
 class Acloud < Formula
   desc ""
   homepage "https://avisi.nl/"
-  version "0.22.0"
+  version "0.23.0"
 
   depends_on "fzf" => :optional
   depends_on "zsh" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.22.0/acloud_0.22.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2983b90dca7f9f26b19a99abb4829373a2f88102e36bcf122d64081131883255"
+    on_intel do
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.23.0/acloud_0.23.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e9b77060be6a91f81ce22d5e12e050d1afaba40966350ee8a5f54b51f48d92bd"
 
       def install
         bin.install "acloud"
@@ -22,9 +22,9 @@ class Acloud < Formula
         fish_completion.install "completions/acloud.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.22.0/acloud_0.22.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3b94676ba3df8aec2157cffa2f485e68e7e8988f869b905915905ed9ed32ac7b"
+    on_arm do
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.23.0/acloud_0.23.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ab530e602528cb2704150bfb29278311929ebc77dd551dc442c76313b3abe607"
 
       def install
         bin.install "acloud"
@@ -36,26 +36,30 @@ class Acloud < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.22.0/acloud_0.22.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "801289ac869fddaeaf5c5fffc31a99f602d6bf730e14840e8db90264a73cae0a"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.23.0/acloud_0.23.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "d881f56a3308fe9408a641f23425256888d80e1c555997d60b132742a9790810"
 
-      def install
-        bin.install "acloud"
-        zsh_completion.install "completions/acloud.zsh" => "_acloud"
-        bash_completion.install "completions/acloud.bash" => "acloud"
-        fish_completion.install "completions/acloud.fish"
+        def install
+          bin.install "acloud"
+          zsh_completion.install "completions/acloud.zsh" => "_acloud"
+          bash_completion.install "completions/acloud.bash" => "acloud"
+          fish_completion.install "completions/acloud.fish"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.22.0/acloud_0.22.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e481b3fd3d3fa09c30308b97f34c99bb2d68562726c15570b2c3b6f16edeb3af"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.23.0/acloud_0.23.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "0514ffbc648f7a001bb01eb824e35fae284046f18306d2e9c3aa400ef4bb0d93"
 
-      def install
-        bin.install "acloud"
-        zsh_completion.install "completions/acloud.zsh" => "_acloud"
-        bash_completion.install "completions/acloud.bash" => "acloud"
-        fish_completion.install "completions/acloud.fish"
+        def install
+          bin.install "acloud"
+          zsh_completion.install "completions/acloud.zsh" => "_acloud"
+          bash_completion.install "completions/acloud.bash" => "acloud"
+          fish_completion.install "completions/acloud.fish"
+        end
       end
     end
   end
