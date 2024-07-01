@@ -5,15 +5,15 @@
 class AcloudToolkit < Formula
   desc ""
   homepage "https://docs.avisi.cloud/"
-  version "1.8.3"
+  version "1.9.0"
 
   depends_on "fzf" => :optional
   depends_on "zsh" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.8.3/acloud-toolkit_1.8.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "60fabe3b24d603529ad9fdcb5ae75b7ada9ecd200196c2addb34d4337d98764a"
+    on_intel do
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.9.0/acloud-toolkit_1.9.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d7f34bf3c837689f3b221f0cf9cfa2c03ba62adee6a33ee25ccfeed79f474b51"
 
       def install
         bin.install "acloud-toolkit"
@@ -22,9 +22,9 @@ class AcloudToolkit < Formula
         fish_completion.install "completions/acloud-toolkit.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.8.3/acloud-toolkit_1.8.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4b2da51ef39d5bb4463579f9aa60a69d17dacb33ca56adbfc3aca46dcff49af6"
+    on_arm do
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.9.0/acloud-toolkit_1.9.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f232032bb66d1701fc1890beb2531fd278ff820af71e99a2a8469317633d0e1b"
 
       def install
         bin.install "acloud-toolkit"
@@ -36,26 +36,30 @@ class AcloudToolkit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.8.3/acloud-toolkit_1.8.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "12a994d7ba57f1504ddd461308fb78fe4c73a1124c4c5a1aa2719d88baa42b52"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.9.0/acloud-toolkit_1.9.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "927d9d1561c3ea49aa07e8c4d4a9f6277c299c4f15d120fc3db3807385559e62"
 
-      def install
-        bin.install "acloud-toolkit"
-        zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
-        bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
-        fish_completion.install "completions/acloud-toolkit.fish"
+        def install
+          bin.install "acloud-toolkit"
+          zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
+          bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
+          fish_completion.install "completions/acloud-toolkit.fish"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.8.3/acloud-toolkit_1.8.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "fd7d96ded773891075026a8d296558617f284b5abb90dc0e0bae54adcb601bea"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.9.0/acloud-toolkit_1.9.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "c71898b91e211151a4b842b22d24327765ec7f3cd80adb45abde39a2e095c1af"
 
-      def install
-        bin.install "acloud-toolkit"
-        zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
-        bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
-        fish_completion.install "completions/acloud-toolkit.fish"
+        def install
+          bin.install "acloud-toolkit"
+          zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
+          bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
+          fish_completion.install "completions/acloud-toolkit.fish"
+        end
       end
     end
   end
