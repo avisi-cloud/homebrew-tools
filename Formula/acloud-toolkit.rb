@@ -5,15 +5,15 @@
 class AcloudToolkit < Formula
   desc ""
   homepage "https://docs.avisi.cloud/"
-  version "1.10.3"
+  version "1.10.4"
 
   depends_on "fzf" => :optional
   depends_on "zsh" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.3/acloud-toolkit_1.10.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f0336b3a9f37dd44c62948bc9dae977598ae5a599559766b3e0bed0ce85f3ae8"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.4/acloud-toolkit_1.10.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f5282094b948cbcadda24984b6e89b046f4f681fe65605ec17e98bff329ac26f"
 
       def install
         bin.install "acloud-toolkit"
@@ -23,8 +23,8 @@ class AcloudToolkit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.3/acloud-toolkit_1.10.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "46ca9b845fd7fd0b85a2bb9298a421c457012ea29edfcd5536dc500a718336fb"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.4/acloud-toolkit_1.10.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0b8c0161f9d5327bb7d8ea7af19e4fc0af95ffb39e2482e4f686170c48243a2a"
 
       def install
         bin.install "acloud-toolkit"
@@ -36,30 +36,24 @@ class AcloudToolkit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.3/acloud-toolkit_1.10.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "8604cdca0d960737c9287ca7397ad8410f2f2e547331377563dbf52edf724748"
-
-        def install
-          bin.install "acloud-toolkit"
-          zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
-          bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
-          fish_completion.install "completions/acloud-toolkit.fish"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.4/acloud-toolkit_1.10.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "991b306472530ac7487209b34317afdce4e4e8832ac2e4f1144fe59e541b6ae8"
+      def install
+        bin.install "acloud-toolkit"
+        zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
+        bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
+        fish_completion.install "completions/acloud-toolkit.fish"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.3/acloud-toolkit_1.10.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "2641c1bef95296033a2c9eed07f7e87fc09627d2bc489254329975c53a588de1"
-
-        def install
-          bin.install "acloud-toolkit"
-          zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
-          bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
-          fish_completion.install "completions/acloud-toolkit.fish"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud-toolkit/1.10.4/acloud-toolkit_1.10.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9ecd473ebc000f5218b777b9f126fc153b00f3ec67164427bdb72cc80d86004e"
+      def install
+        bin.install "acloud-toolkit"
+        zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
+        bash_completion.install "completions/acloud-toolkit.bash" => "acloud-toolkit"
+        fish_completion.install "completions/acloud-toolkit.fish"
       end
     end
   end
