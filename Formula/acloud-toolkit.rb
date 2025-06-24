@@ -7,6 +7,10 @@ class AcloudToolkit < Formula
   homepage "https://docs.avisi.cloud/"
   version "1.10.4"
 
+  deprecate! date: "2025-06-24",
+    because: "we are transitioning to a cask-based installation. Please install the cask with: `brew install --cask avisi-cloud/tools/acloud-toolkit`",
+    replacement_cask: "avisi-cloud/tools/acloud-toolkit"
+
   depends_on "fzf" => :optional
   depends_on "zsh" => :optional
 
