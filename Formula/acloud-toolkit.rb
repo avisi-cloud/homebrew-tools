@@ -5,15 +5,15 @@
 class AcloudToolkit < Formula
   desc ""
   homepage "https://docs.avisi.cloud/docs/cli/acloud-toolkit/overview"
-  version "1.11.1"
+  version "1.12.0"
 
   depends_on "fzf" => :optional
   depends_on "zsh" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.11.1/acloud-toolkit_1.11.1_darwin_amd64.tar.gz"
-      sha256 "eb726a5f90b334bd9ffb4f39fec19418056d4cb71d3c8e59858fe2306383ebb1"
+      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.12.0/acloud-toolkit_1.12.0_darwin_amd64.tar.gz"
+      sha256 "bea903ba94f621e072a695562371a9e81d78fb85775cb580d86e6a3533c33052"
 
       def install
         bin.install "acloud-toolkit"
@@ -23,8 +23,8 @@ class AcloudToolkit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.11.1/acloud-toolkit_1.11.1_darwin_arm64.tar.gz"
-      sha256 "04eb2e3701e9083d346c5290632583b98f5c9cefffdc62ed303de008ff6926f8"
+      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.12.0/acloud-toolkit_1.12.0_darwin_arm64.tar.gz"
+      sha256 "c47188e9580318a15e92a23b3a9c731e6f2dd9c2b3800832abf81d2fe3fc1c15"
 
       def install
         bin.install "acloud-toolkit"
@@ -37,8 +37,8 @@ class AcloudToolkit < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.11.1/acloud-toolkit_1.11.1_linux_amd64.tar.gz"
-      sha256 "b2aa6de10023681a8e8c6efb1a50f8fc34041bb8f666ea1373ccec6a5661b9cb"
+      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.12.0/acloud-toolkit_1.12.0_linux_amd64.tar.gz"
+      sha256 "096a50bdc6e1a727547d88fbf09ac96237d4576b6c281589ccbdb336d2e99605"
       def install
         bin.install "acloud-toolkit"
         zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
@@ -47,8 +47,8 @@ class AcloudToolkit < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.11.1/acloud-toolkit_1.11.1_linux_arm64.tar.gz"
-      sha256 "11d749426a6e4aaec87d2bf42bce6d2faf1060921427feb5222758aa21e094d5"
+      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.12.0/acloud-toolkit_1.12.0_linux_arm64.tar.gz"
+      sha256 "3c9acb45a26469c05dcf598778a5ac27a0e93d0a03a32eaca1f8965e0b1ee5f2"
       def install
         bin.install "acloud-toolkit"
         zsh_completion.install "completions/acloud-toolkit.zsh" => "_acloud-toolkit"
