@@ -12,8 +12,8 @@ class AcloudToolkit < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v1.13.1/acloud-toolkit_1.13.1_darwin_amd64.tar.gz"
-      sha256 "4eb126b7a962d283e4da1350be2a11d24e6a1ebb86c98ad47ba802803bcdbe17"
+      url "https://github.com/avisi-cloud/acloud-toolkit/archive/refs/tags/v1.14.0.tar.gz"
+      sha256 "0be56a571f7997716eab32d8944de9c97e45dfac2b98625f8d5b4d5b05bc824d"
 
       def install
         bin.install "acloud-toolkit"
