@@ -9,7 +9,7 @@ class AcloudToolkit < Formula
 
   deprecate! date: "2025-07-28",
     because: "is moving to a cask-based installation. Before installing the cask, please uninstall the formula first with: `brew uninstall acloud-toolkit`",
-    replacement_cask: "avisi-cloud/tools/acloud"
+    replacement_cask: "avisi-cloud/tools/acloud-toolkit"
 
   depends_on "fzf" => :optional
   depends_on "zsh" => :optional
