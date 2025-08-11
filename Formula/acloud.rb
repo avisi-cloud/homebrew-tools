@@ -5,7 +5,11 @@
 class Acloud < Formula
   desc ""
   homepage "https://avisi.nl/"
-  version "0.27.2"
+  version "0.27.3"
+
+  deprecate! date: "2025-08-11",
+    because: "is moving to a cask-based installation. Before installing the cask, please uninstall the formula first with: `brew uninstall acloud`",
+    replacement_cask: "avisi-cloud/tools/acloud"
 
   depends_on "fzf" => :optional
   depends_on "zsh" => :optional
