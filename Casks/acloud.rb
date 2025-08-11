@@ -2,7 +2,7 @@
 cask "acloud" do
   desc ""
   homepage "https://docs.avisi.cloud/docs/cli/acloud/overview/"
-  version "0.28.0"
+  version "0.28.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,23 +15,23 @@ cask "acloud" do
 
   on_macos do
     on_intel do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.0/acloud_0.28.0_darwin_amd64.tar.gz"
-      sha256 "2f8f9ca923198144baf033bc56abdaf99b2814bd8f91281dc37920967d144795"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_darwin_amd64.tar.gz"
+      sha256 "a8496cf2b4402b14ba8fa0cfcfa92a23d904d52a34b2d084830f541d7e8e3a73"
     end
     on_arm do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.0/acloud_0.28.0_darwin_arm64.tar.gz"
-      sha256 "72b5d4f36332f76b17ee60a7b22c760cc472064a67443af84e70c1f4d946a18b"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_darwin_arm64.tar.gz"
+      sha256 "ab9c9801064d9838e2d727d1678e33001a9ff2d4f52d92a8006f75e0e166faca"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.0/acloud_0.28.0_linux_amd64.tar.gz"
-      sha256 "3f7240a0f32958eea4f07036b9d4c7ad53eab2c410acc9c6fab9657d6d57dd65"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_linux_amd64.tar.gz"
+      sha256 "3878604b52410295b311fbf46dd2fe223c04f5660e37a13f5e2ea31ca368ec61"
     end
     on_arm do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.0/acloud_0.28.0_linux_arm64.tar.gz"
-      sha256 "295cf754eace36849c5ed2e9dec929d649131becb9ff3acbf43b39ec1a89bd3d"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_linux_arm64.tar.gz"
+      sha256 "2e51420ba12fdbc1310e4001ae39e2e179fa62c731f673cc616748f441780e52"
     end
   end
 
