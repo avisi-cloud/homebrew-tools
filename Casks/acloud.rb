@@ -35,10 +35,6 @@ cask "acloud" do
     end
   end
 
-  conflicts_with formula: [
-      "acloud",
-    ]
-
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
       # replace 'acloud' with the actual binary name
