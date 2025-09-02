@@ -2,7 +2,7 @@
 cask "acloud" do
   desc ""
   homepage "https://docs.avisi.cloud/docs/cli/acloud/overview/"
-  version "0.28.1"
+  version "0.29.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,23 +15,23 @@ cask "acloud" do
 
   on_macos do
     on_intel do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_darwin_amd64.tar.gz"
-      sha256 "a8496cf2b4402b14ba8fa0cfcfa92a23d904d52a34b2d084830f541d7e8e3a73"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.29.0/acloud_0.29.0_darwin_amd64.tar.gz"
+      sha256 "1d2aee057ca48df97c506f3946ef3e73c550a0b209a186b1e9832dcb129e8555"
     end
     on_arm do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_darwin_arm64.tar.gz"
-      sha256 "ab9c9801064d9838e2d727d1678e33001a9ff2d4f52d92a8006f75e0e166faca"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.29.0/acloud_0.29.0_darwin_arm64.tar.gz"
+      sha256 "4abcc44db4d310181838e3312e13df2ed783445b45af022013d64135c8f45f2e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_linux_amd64.tar.gz"
-      sha256 "3878604b52410295b311fbf46dd2fe223c04f5660e37a13f5e2ea31ca368ec61"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.29.0/acloud_0.29.0_linux_amd64.tar.gz"
+      sha256 "c98b4b42c82d3926f5c4e4f0457b7705888c03d75930ae54c9b22b827ede275d"
     end
     on_arm do
-      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.28.1/acloud_0.28.1_linux_arm64.tar.gz"
-      sha256 "2e51420ba12fdbc1310e4001ae39e2e179fa62c731f673cc616748f441780e52"
+      url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/0.29.0/acloud_0.29.0_linux_arm64.tar.gz"
+      sha256 "b629392b20d6a8990a15a5edea66154bf6347491f6f3428c477160e6cf0bdf7e"
     end
   end
 
