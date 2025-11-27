@@ -3,7 +3,7 @@ cask "acloud-toolkit" do
   name "acloud-toolkit"
   desc ""
   homepage "https://docs.avisi.cloud/docs/cli/acloud-toolkit/overview"
-  version "1.15.0"
+  version "1.16.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,28 +17,27 @@ cask "acloud-toolkit" do
   on_macos do
     on_intel do
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_darwin_amd64.tar.gz"
-      sha256 "72579474560a10099434465d0557a709d73c348b5e794411eea50bfabe4b66f7"
+      sha256 "68c2454fc49985f9ccfe1a95c0b90018a9ec8c42aa4dd7b0f5839ecb80695496"
     end
     on_arm do
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_darwin_arm64.tar.gz"
-      sha256 "91c9a4ea430d5966e3c86a46a056ae8b78b66f0142465223850af90849c767d9"
+      sha256 "e5025fc511bbf1847e60bd6210356d8afccfc120ed49a5cec8e334a533e05894"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_linux_amd64.tar.gz"
-      sha256 "de5d71f4a70e62314366d9c6c88a0e962557c8bc5cc3a82808b7a012ce6b51d8"
+      sha256 "fb98b3002c9ac9433c795d91a90e5c990f844a7c7cc1a609b6a4904e13f2a370"
     end
     on_arm do
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_linux_arm64.tar.gz"
-      sha256 "7a09acc5e0946aa5d15b8a2c8f8417fe29cf3ba9d80bf260fead7d530fd6998b"
+      sha256 "4fc2fab31b38932fdb482c1bd14f741d870a6bd06612cff488c4f00efe7bdccc"
     end
   end
 
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      # replace 'acloud-toolkit' with the actual binary name
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/acloud-toolkit"]
     end
   end
