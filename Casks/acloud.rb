@@ -3,7 +3,7 @@ cask "acloud" do
   name "acloud"
   desc ""
   homepage "https://docs.avisi.cloud/docs/cli/acloud/overview/"
-  version "0.29.2"
+  version "0.29.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "acloud" do
   on_macos do
     on_intel do
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_darwin_amd64.tar.gz"
-      sha256 "c8f5223bbad26dabf52ec812a0a73de44e72f350778de08b8d51a4cdcf895ef5"
+      sha256 "7d0a58ad664eadee50a8d06156a34783d9d9d08121c84fe6e20a0d7fd9048847"
     end
     on_arm do
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_darwin_arm64.tar.gz"
-      sha256 "08e03601c2b786c8b04fe542d9680b517d84c74ecd860fb71702e9d3ffe97113"
+      sha256 "b20ccd8686081811e09c8fff8f9bf8a48183d9030a07ddc306b3a522984bedd9"
     end
   end
 
   on_linux do
     on_intel do
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_linux_amd64.tar.gz"
-      sha256 "71b7f8622f3c7628aee0d374ef3216cdda118ccf4733bdee2834c26120056315"
+      sha256 "555b0a982e8d8aea538b311ea50105c07800f3510b0723e642d0a0b793b08c1f"
     end
     on_arm do
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_linux_arm64.tar.gz"
-      sha256 "b39f990e51cfef46523880743fab14fc0842f3e9fa08fbf51e7ef2d38d5d7e7e"
+      sha256 "e45b8833540405da2e48735b74c6fdf16d7b0956342739fe45a2241852c2cefb"
     end
   end
 
