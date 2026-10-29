@@ -6,25 +6,25 @@ cask "acloud" do
     end
   end
 
-  version "0.39.1"
+  version "0.39.2"
 
   on_macos do
     on_arm do
-      sha256 "84649f6d1efe94dba1e8176026e899a74066d75cba08a4a5fe510d3c18a0216d"
+      sha256 "c2911047c669a4589a757620c4e6c2c487968f45b0305f227ecf508ee85d4358"
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "bba9440ae2f2bae5aaf4df1bcfea724b03e2321c5804e7a7eb7e331bb3814a22"
+      sha256 "542251e04a5c50d63059dec511cb49773833ca0d52a16c29d93073217464f250"
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "267020a7f67eb9b38c55f6170682ea1a1bbdce216bf0a8fd6e8b0f1ea0771344"
+      sha256 "7393fd0696c8f6b8ce18d8e7c0a2597349df9c47430d2f430512a1fb5ec9e56a"
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "8014e9541558711a220b707ed4c1b9230c3e915e92f772ce6837a737b21aac45"
+      sha256 "f9053a0ef5b3221ce75ecdcd4aa5c6d2f1898dc7e2001af3a9149e8d96725bac"
       url "https://avisi-cloud-brew-tap-public.s3.eu-west-1.amazonaws.com/releases/acloud/#{version}/acloud_#{version}_linux_amd64.tar.gz"
     end
   end
