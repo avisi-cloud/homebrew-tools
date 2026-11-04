@@ -1,6 +1,6 @@
 cask "acloud-playrooms" do
-  version "0.30.0"
-  sha256 "c0c0de653dbe8bafad4900d2dde0354ad5ea0be6b62bdbf51eeadd90bfa245ee"
+  version "0.30.1"
+  sha256 "77ad75b26b7440174a0ae481d550a5fdef09e7e8086f2de88ecab1b51b002283"
 
   url "https://github.com/avisi-cloud/acloud-playrooms/releases/download/v#{version}/acloud-playrooms_#{version}_darwin_universal.zip"
   name "Acloud Playrooms"
@@ -8,6 +8,7 @@ cask "acloud-playrooms" do
   homepage "https://github.com/avisi-cloud/acloud-playrooms"
 
   depends_on macos: ">= :monterey"
+  depends_on cask: "avisi-cloud/tools/acloud"
 
   app "Acloud Playrooms.app"
 
@@ -22,8 +23,7 @@ cask "acloud-playrooms" do
     This app is in alpha: things may change or break between versions.
     Report problems or ideas at https://github.com/avisi-cloud/acloud-playrooms/issues
 
-    Requires the acloud CLI and an Acloud account.
-    Install the CLI with: brew install --cask avisi-cloud/tools/acloud
-    Then sign in with: acloud auth login
+    Requires an Acloud account. Homebrew installed the acloud CLI with this app.
+    Sign in with: acloud auth login
   EOS
 end
