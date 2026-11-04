@@ -1,22 +1,21 @@
 cask "acloud-playrooms" do
-  version "0.30.1"
-  sha256 "77ad75b26b7440174a0ae481d550a5fdef09e7e8086f2de88ecab1b51b002283"
+  version "0.30.2"
+  sha256 "12fcb1a38ecc1bb4f1dd5cacbe15b3768ba0fe78e6e9c98d73c36cf85582a188"
 
   url "https://github.com/avisi-cloud/acloud-playrooms/releases/download/v#{version}/acloud-playrooms_#{version}_darwin_universal.zip"
   name "Acloud Playrooms"
   desc "Desktop interface for Acloud AI development environments"
   homepage "https://github.com/avisi-cloud/acloud-playrooms"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
   depends_on cask: "avisi-cloud/tools/acloud"
 
   app "Acloud Playrooms.app"
 
   # This app is ad-hoc signed, but not Apple-notarized.
   # Remove quarantine only from this installed app, as in acloud-toolkit.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Acloud Playrooms.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Acloud Playrooms.app"]
   end
 
   caveats <<~EOS
