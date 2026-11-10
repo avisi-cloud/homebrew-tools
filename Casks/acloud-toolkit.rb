@@ -6,25 +6,25 @@ cask "acloud-toolkit" do
     end
   end
 
-  version "1.19.0"
+  version "1.20.0"
 
   on_macos do
     on_arm do
-      sha256 "4312cf5ff5ab0b49db98313e731e0f840180b2839e58db687d13d9bbc0d428f5"
+      sha256 "74c32de63ed6aa36b6a06505e5f576e31a2f61a76a169128dc75ed31fb0e554c"
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "83998a7b2f47c8b23584ad63c10543f047cb30a87664b82d20ac33794be9c6cf"
+      sha256 "6683d5970f9740ca7cc5fd4d97881caabecf0d0a0c430754a1a7059ff7e4de2d"
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "55da5cf8c6fee3fc7875bf862e39a9c64aa485399b421cdd0075d4042c6a5507"
+      sha256 "811405a04204ca0ce1d2f879e80b0cd9f986a4643b952655e452bbbd4e126142"
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "2387a4a0e5b5ce5ad96a80cb0684ef4de1ef56ac0621b37a547491dbb8bc1b7e"
+      sha256 "22857009831b36de0ea46bb8d5bb94178b96a2efc41973e12a6071708cc488be"
       url "https://github.com/avisi-cloud/acloud-toolkit/releases/download/v#{version}/acloud-toolkit_#{version}_linux_amd64.tar.gz"
     end
   end
